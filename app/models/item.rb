@@ -1,3 +1,10 @@
 class Item < ApplicationRecord
-  # has_one_attached :ファイル名
+  has_one_attached :image
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :category
+  belongs_to :delivery_fee
+  belongs_to :item_condition
+  belongs_to :prefecture
+  belongs_to :shipping_day
 end
